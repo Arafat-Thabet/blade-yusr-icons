@@ -1,0 +1,42 @@
+{
+    "name": "yusr/blade-yusr-icons",
+    "type": "library",
+    "description": "A package to easily make use of Yusr Icons in your Laravel Blade views",
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "blade-ui-kit/blade-icons": "^1.5",
+        "illuminate/support": "^10.34|^11.0|^12.0"
+    },
+    "homepage": "https://github.com/Arafat-Thabet/blade-yusr-icons",
+    "keywords": [
+        "Laravel",
+        "BladeYusrIcons"
+    ],
+    "require-dev": {
+        "laravel/pint": "^1.13",
+        "orchestra/testbench": "^8.12|^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yusr\\BladeYusrIcons\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yusr\\BladeYusrIcons\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yusr\\BladeYusrIcons\\BladeYusrIconServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
