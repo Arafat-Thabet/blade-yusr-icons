@@ -54,25 +54,25 @@ php artisan vendor:publish --tag=blade-yusr-icons-config
 Icons can be used a self-closing Blade components which will be compiled to SVG icons:
 
 ```blade
-<x-fi-rr-home/>
+<x-yusr-icon name="fi-rr-home"/>
 ```
 
 You can also pass classes to your icon components:
 
 ```blade
-<x-fi-rr-home class="w-6 h-6 text-gray-500"/>
+<x-yusr-icon name="fi-rr-home" class="w-6 h-6 text-gray-500"/>
 ```
 
 And even use inline styles:
 
 ```blade
-<x-fi-rr-home style="color: #555"/>
+<x-yusr-icon name="fi-rr-home" style="color: #555"/>
 ```
 
 custom Icons SVG icons:
 
 ```blade
-<x-custom-link/>
+<x-yusr-icon name="custom-approved"/>
 ```
 For a full list of available icons see [the SVG directory](resources/svg).
 
