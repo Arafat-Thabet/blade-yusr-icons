@@ -124,8 +124,6 @@ final class Factory
     {
              
         [$set, $name] = $this->splitSetAndName($name);
-         logObj(['sets list']);
-         logObj(['sets'=>$this->sets]);
         try {
             return new Svg(
                 $name,

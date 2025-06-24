@@ -10,7 +10,6 @@ A package to easily make use of [Flaticon] and custom icons in your Laravel Blad
 
 For a full list of available icons see [the SVG directory](./resources/svg).
 
-
 ## Requirements
 
 - PHP 8.1 or higher
@@ -74,12 +73,23 @@ custom Icons SVG icons:
 ```blade
 <x-yusr-icon name="custom-approved"/>
 ```
+by filamentphp icon function
+
+```
+  ->icon(fn() => getSvg('fi-rr-file-excel'))
+```
+by filamentphp icon function with $class, $attributes
+
+```
+  ->icon(fn() => getSvg('fi-rr-file-excel','h-5 w-5',['fill'=>'#000']))
+```
 For a full list of available icons see [the SVG directory](resources/svg).
 
 ### Icon Sets
-- flaticon  Regular (`fi-rr`)
+
+- flaticon Regular (`fi-rr`)
 - custom (`custom`)
-> Note: These are default prefixes for the specified icon sets, these can all be configured [in the `config/blade-yusr-icons.php` file](config/blade-yusr-icons.php).
+  > Note: These are default prefixes for the specified icon sets, these can all be configured [in the `config/blade-yusr-icons.php` file](config/blade-yusr-icons.php).
 
 ### Raw SVG Icons
 
@@ -92,18 +102,18 @@ php artisan vendor:publish --tag=blade-yusr-icons --force
 Then use them in your views like:
 
 ```blade
-<img src="{{ asset('vendor/blade-yusr-icons/flaticon-regular/fi-rr-0.svg') }}" width="10" height="10"/>
+<img src="{{ getSvg('vendor/blade-yusr-icons/flaticon-regular/fi-rr-home.svg') }}" width="10" height="10"/>
 ```
-
+```by getSvg
+<img src="{{ getSvg('fi-rr-home') }}" width="10" height="10"/>
+```
 ### flaticon interface-icons list
-
 
 To explore flaticon list [vist flaticon site](https://www.flaticon.com/uicons/interface-icons) u
 
-
 ### Caching
 
-Because of the sheer number of icons, a small performance hit can be seen when using *pro or kit-supplied* icons. If you'd like to mitigate this, you can cache the icons. To do this, run the following Artisan command:
+Because of the sheer number of icons, a small performance hit can be seen when using _pro or kit-supplied_ icons. If you'd like to mitigate this, you can cache the icons. To do this, run the following Artisan command:
 
 ```shell
 php artisan icons:cache
@@ -123,7 +133,6 @@ composer test
 
 Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
-
 ## Credits
 
 - [Arafat-Thabet][link-author]
@@ -131,7 +140,6 @@ Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
 
 ## Copyrights Arafat-Thabet Dev. Team
 

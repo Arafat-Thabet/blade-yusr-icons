@@ -89,7 +89,7 @@ class BladeYusrIconServiceProvider extends ServiceProvider
     }
     private function bootDirectives(): void
     {
-        Blade::directive('yusrSvg', fn($expression) => "<?php echo e(svg($expression)); ?>");
+        Blade::directive('yusrSvg', fn($expression) => "<?php echo e(yusrSvg($expression)); ?>");
     }
 
     private function bootIconComponent(): void
